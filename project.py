@@ -48,7 +48,7 @@ def show_meme():
     Show a happy response and a gif when user says yes.
     """
     print("YAYYYYY!!! 🥳💖")
-    print("Opening a happy cat for you 😺")
+    print("Opening happy cats for you 😺")
     webbrowser.open(GIF_URL)
 
 def think_again() -> None:
