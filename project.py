@@ -1,8 +1,8 @@
 import webbrowser
 import os
 
-
-HTML_FILE = "index.html"
+HTML_FILE_YES = 'yes.html'
+HTML_FILE_NO = "index.html"
 
 
 def main():
@@ -48,17 +48,20 @@ def show_meme():
     """
     Show a happy response and open the webpage when user says yes.
     """
-    print("YAYYYYY!!! 🥳💖")
-    print("Opening your webpage for you 😺")
-    
-    # Get the full path to index.html
-    file_path = os.path.abspath(HTML_FILE)
+    # Get the full path to yes.html
+    file_path = os.path.abspath(HTML_FILE_YES)
     
     # Open the HTML file in the default browser
     webbrowser.open('file://' + file_path)
+    
 
 def think_again() -> None:
-    print("🤨 Think again!")
+    
+    # Get the full path to index.html
+    file_path = os.path.abspath(HTML_FILE_NO)
+    
+    # Open the HTML file in the default browser
+    webbrowser.open('file://' + file_path)
 
 def remind_valid_input() -> None:
     print("⚠️  Please only enter 'yes' or 'no'.")
