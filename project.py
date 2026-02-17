@@ -1,7 +1,8 @@
 import webbrowser
+import os
 
 
-GIF_URL = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmV2NDZ6Mm1nNzQ3dndscDlza2J6bmFraTYyMGZucnZmdndvcHQyZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pAHAgWYYjWIE9DNLcC/giphy.gif"
+HTML_FILE = "index.html"
 
 
 def main():
@@ -45,11 +46,16 @@ def standardize(answer: str) -> str:
 
 def show_meme():
     """
-    Show a happy response and a gif when user says yes.
+    Show a happy response and open the webpage when user says yes.
     """
     print("YAYYYYY!!! 🥳💖")
-    print("Opening happy cats for you 😺")
-    webbrowser.open(GIF_URL)
+    print("Opening your webpage for you 😺")
+    
+    # Get the full path to index.html
+    file_path = os.path.abspath(HTML_FILE)
+    
+    # Open the HTML file in the default browser
+    webbrowser.open('file://' + file_path)
 
 def think_again() -> None:
     print("🤨 Think again!")
