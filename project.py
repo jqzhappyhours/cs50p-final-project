@@ -46,7 +46,7 @@ def standardize(answer: str) -> str:
 
 def show_meme():
     """
-    Show a happy response and open the webpage when user says yes.
+    Open the webpage when user says yes.
     """
     # Get the full path to yes.html
     file_path = os.path.abspath(HTML_FILE_YES)
@@ -56,7 +56,9 @@ def show_meme():
     
 
 def think_again() -> None:
-    
+    """
+    Open the webpage when user says no.
+    """
     # Get the full path to index.html
     file_path = os.path.abspath(HTML_FILE_NO)
     
